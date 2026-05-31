@@ -1,0 +1,13 @@
+export default function Select({ label, children, className = "", ...props }) {
+  return (
+    <label className="block space-y-1.5">
+      {label ? <span className="text-sm font-medium text-slate-300">{label}</span> : null}
+      <select
+        className={`w-full rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-2.5 text-base text-slate-100 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 sm:py-2 sm:text-sm ${className}`}
+        {...props}
+      >
+        {children}
+      </select>
+    </label>
+  );
+}
